@@ -39,7 +39,7 @@ for year in years:
     low_df[year] = [e[1] for e in estimates]
     high_df[year] = [e[2] for e in estimates]
 
-# Save all to a new Excel file with 3 sheets
+# save to new .xlsx file
 output_path = "HIV_Estimates_Separated_Deaths.xlsx"
 with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
     mid_df.to_excel(writer, sheet_name='MidEst', index=False)
